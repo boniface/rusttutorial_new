@@ -143,7 +143,23 @@ fn ops_on_types(){
     println!("{}", i32::abs(-4)); // Prints 4
 }
 ```
+
+
 ### Checked, Wrapping, Saturating, and Overflowing Arithmetic
+* When an integer arithmetic overflows, 
+  * In debug build, Rust panics
+  * In Release build, it wraps around 
+    * Produces it produces the value equivalent to the  mathematically correct result modulo the range of the value.
+    * Multiplication wraps to a negative number
+Integer Arithmetic falls into four categories 
+    * Checked operations return an Option of the result
+    * Wrapping operations return the value equivalent to the mathematically correct
+      result modulo the range of the value i.e  A x B = AB modulo 2 <sup>isize</sup>
+    * Saturating operations return the representable value that is closest to the mathematically correct result. In other words, the result is “clamped” to the maximum
+      and minimum values the type can represent:
+    * Overflowing operations return a tuple (result, overflowed) , where result is  what the wrapping version of the function would return, and overflowed is a
+      bool indicating whether an overflow occurred:
+
 ### 
 ## Pointer Types 
 ## Arrays. Vectors and Slices 
