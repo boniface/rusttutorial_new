@@ -3,6 +3,16 @@ Items to be covered
 
 1. Chap 3: Fundamental Types 
 2. Chap 4: Ownership and Moves
+
+There are two memory types management
+  1. Safety first. Use garbage collector to clean up objects and no dangling pointers or references can be 
+  2. Control First 
+
+
+
+
+
+
 3. Chap 5: References 
 4. Chap 7: Error Handling
 5. chap 11: Traits and Generics
